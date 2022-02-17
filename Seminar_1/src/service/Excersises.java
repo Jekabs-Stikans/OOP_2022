@@ -11,10 +11,14 @@ public class Excersises
 
 	public static void main(String[] args) 
 	{
-		// TODO Auto-generated method stub
+		String[] names = { "Elena", "Thomas", "Hamilton", "Suzie", "Phil", "Matt", "Alex", "Emma", "John", "James", "Jane", "Emily", 
+				"Daniel", "Neda", "Aaron", "Kate" };
+		int[] times = { 341, 273, 278, 329, 445, 402, 388, 275, 243, 334, 412, 393, 299, 343, 317, 265 };
 		
-		System.out.print("Hello world!\n");
-		System.out.print("Hello world!\n");
+		
+		for(int i = 0; i < Math.min(names.length, times.length); i++)
+			System.out.printf("[%S, <%d>]\n", names[i], times[i]);
+		
 	}
 
 }
