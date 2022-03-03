@@ -34,6 +34,12 @@ public class Student {
 	}
 
 	public void setName(String name) {
+		String alphabet = "abcdefghijklmnoprqstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ";
+		for(int i = 0; i < name.length(); i++)
+			if(alphabet.indexOf(name.charAt(i)) == -1) {
+				this.name = "InvaildName";
+				return;
+			}
 		this.name = name;
 	}
 
@@ -42,6 +48,12 @@ public class Student {
 	}
 
 	public void setSurname(String surname) {
+		String alphabet = "abcdefghijklmnoprqstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ";
+		for(int i = 0; i < surname.length(); i++)
+			if(alphabet.indexOf(surname.charAt(i)) == -1) {
+				this.surname = "InvaildSurname";
+				return;
+			}
 		this.surname = surname;
 	}
 

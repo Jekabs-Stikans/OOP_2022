@@ -45,6 +45,12 @@ public class Course
 
 
 	public void setTitle(String title) {
+		String alphabetDigit = "abcdefghijklmnoprqstuvwxyzABCDEFGHIJKLMNOPRQSTUVWXYZ1234567890";
+		for(int i = 0; i < title.length(); i++)
+			if(alphabetDigit.indexOf(title.charAt(i)) == -1) {
+				this.title = "InvaildTitle";
+				return;
+			}
 		this.title = title;
 	}
 
@@ -55,6 +61,8 @@ public class Course
 
 
 	public void setCreditPoints(int creditPoints) {
+		if(creditPoints < 0)
+			creditPoints = 0;
 		this.creditPoints = creditPoints;
 	}
 

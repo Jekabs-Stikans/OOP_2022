@@ -40,6 +40,10 @@ public class Grade
 	}
 
 	public void setValue(int value) {
+		if(value < 1)
+			value = 1;
+		if(value > 10)
+			value = 10;
 		this.value = value;
 	}
 
